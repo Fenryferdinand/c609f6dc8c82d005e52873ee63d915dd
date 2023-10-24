@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    ports:
+      - "90:90"
+    volumes:
+      - ./controller:/app
+    depends_on:
+      - db
+
+  db:
+    container_name: database
+    image: postgres:12.4-alpine
+    restart: on-failure
+    environment:
+      POSTGRES_DB: mailer
+      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 
+    ports:
+      - "1435:5432"

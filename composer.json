@@ -1,0 +1,7 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^6.8",
+        "mjphaynes/php-resque": "3.1.*",
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
