@@ -6,7 +6,7 @@ services:
     ports:
       - "90:90"
     volumes:
-      - ./controller:/app
+      - ./app:/app
     depends_on:
       - db
 
